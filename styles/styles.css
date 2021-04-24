@@ -14,6 +14,12 @@ html{
     font-size: larger;
     background-color: black;
   }
+  ul{
+    list-style-type: none;
+  }
+  ol{
+    list-style-type: none;
+  }
   main{
     border: 2px solid white;
   }
