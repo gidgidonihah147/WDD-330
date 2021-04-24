@@ -1,0 +1,42 @@
+html{
+    background-color: rgb(105, 105, 248);
+  }
+  header{
+    border: 2px solid white;
+    background: rgb(218, 218, 57);
+    text-align: center;
+  }
+  body{
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: larger;
+    background-color: black;
+  }
+  main{
+    border: 2px solid white;
+  }
+  footer{
+    border: 2px solid white;
+    background: black;
+  }
+
+  input:invalid {
+    border-color: white;
+    background-color: tomato;
+  }
+
+  @media only screen and (min-width:786px){
+    body{
+      max-width: 90%;
+      margin: auto;
+      text-align: center;
+      color: aliceblue;
+      font-size: large;
+    }
+    form {
+      text-align-last: center;
+    }
+  }
+
