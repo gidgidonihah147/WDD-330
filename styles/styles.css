@@ -6,6 +6,9 @@ html{
     background: rgb(218, 218, 57);
     text-align: center;
   }
+  header  li {
+    list-style: none;
+  }
   body{
     max-width: 100%;
     margin: auto;
