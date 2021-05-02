@@ -18,7 +18,7 @@ html{
     background-color: black;
   }
   li{
-    padding: 10px;
+    padding: 5px;
   }
   ul {
     border: 2px solid white;
@@ -31,7 +31,11 @@ html{
     border: 2px solid white;
     background: black;
   }
-
+ul p.note {
+  border: 2px solid yellow;
+  padding: 1em;
+  text-align: center;
+}
   article {
     width: 90%;
     margin: auto;
