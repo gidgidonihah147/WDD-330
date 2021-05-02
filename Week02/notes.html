@@ -15,8 +15,9 @@
     <main>
         <article>
             <h2>Ch2: Programming basics</h2>
-            <p>Much of this should be review, but pay special attention to the sections on variables, scope, converting/parsing, and template literals.</p>
-            <ul>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p>Much of this should be review, but pay special attention to the sections on variables, scope, converting/parsing, and template literals.</p><br><br>
                 <li>Well commented code is a halmarc of a JavaScript ninja. You will thank yourself later.</li>
                 <li>You dont NEED to place ; at the end of each statement. But it has the chance of causing errors not to, so its best practice.</li>
                 <li>You can use white space to keep your code neat and easy to read.</li>
@@ -31,8 +32,9 @@
 
         <article>
             <h2>Ch3: Arrays, Logic, and Loops</h2>
-            <p>Again much of this should feel like review. Pay special attention to the section on array methods.</p>
-            <ul>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p>Again much of this should feel like review. Pay special attention to the section on array methods.</p><br><br>
                 <li>Each item in an array can be treated like a variable</li>
                 <li>Any blanks in an array are filled with the value "undefined"</li>
                 <li>You can define multiple variables within an array at once</li>
@@ -46,8 +48,9 @@
 
         <article>
             <h2>Ch4: Functions</h2>
-            <p>Note that there are multiple ways to declare a function in Javascript. Pay close attention to the concept of callbacks as well.</p>
-            <ul>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p>Note that there are multiple ways to declare a function in Javascript. Pay close attention to the concept of callbacks as well.</p><br><br>
                 <li>Most common way to define a function is called "arrow"</li>
                 <li>All functions have a read only property called name</li>
                 <li>Adding functions through constructors are messy and best to avoid</li>
@@ -56,20 +59,32 @@
                 <li>Any perameters will need to be within the "()" to call an argument with perameters</li>
             </ul>
         </article>
-        
+
         <article style="margin-bottom: 1em;">
             <h2>Weekly Report</h2>
-            <p>I was able to complete all the readings for this week. I also was able to reach out to my team and get partially acquainted with them.</p>
-            <p>I got more familiar with the github software and pushing updates from my computer. Never having used github before, I have found that I love it, even though I am not using it to its fullest potential.</p>
-            <p>I assume as with most students who are currently doing webdesign, I'm starting to get asked to make different people websites for their personal use. I love the practice it gives and the ability to learn how to learn to interpret what they want into the site. I would love to code from both my laptop and desktop, but havent found a way to do this on the go easily. With github I think I could. I want to keep track of all the sites I build for friends and family on github to build up a portfolio, as well as make sure I always have access to it.</p>
-            <p>As far as learning from the reading though, most of it was review, as you can tell from the notes that I took, it was general knowledge and nothing specific. But I had never never knew the actual difference between let & var. As well as I never knew what a set was or how to use it.</p>
-            <p>Excited to keep learning more as we move through the rest of the semester!</p>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p>I was able to complete all the readings for this week. I also was able to reach out to my team and get partially acquainted with them.</p>
+                <p>I got more familiar with the github software and pushing updates from my computer. Never having used github before, I have found that I love it, even though I am not using it to its fullest potential.</p>
+                <p>I assume as with most students who are currently doing webdesign, I'm starting to get asked to make different people websites for their personal use. I love the practice it gives and the ability to learn how to learn to interpret what they want into the site. I would love to code from both my laptop and desktop, but havent found a way to do this on the go easily. With github I think I could. I want to keep track of all the sites I build for friends and family on github to build up a portfolio, as well as make sure I always have access to it.</p>
+                <p>As far as learning from the reading though, most of it was review, as you can tell from the notes that I took, it was general knowledge and nothing specific. But I had never never knew the actual difference between let & var. As well as I never knew what a set was or how to use it.</p>
+                <p>Excited to keep learning more as we move through the rest of the semester!</p>
+            </ul>
         </article>
     </main>
     <footer>
         <div><p>Author: Tristin Parker - 2021 - BYUI - <a href="../index.html">Index Link</a></p></div>
     </footer>
-<script>
-</script>
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+          toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+          });
+        }
+        </script>
 </body>
 </html>
