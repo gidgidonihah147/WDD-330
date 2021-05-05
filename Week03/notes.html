@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>W03 Notes</title>
+    <meta charset="utf-8">
+    <meta description="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <div><h1>W03 Reading - JavaScript Ninja</h1></div>
+    </header>
+    <main>
+        <article>
+            <h2>Ch5: Objects</h2>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p class="note">Questions for the Teacher</p>
+                <ol>
+                    <li></li>
+                </ol>
+                <p class="note">Personal Notes</p>
+                <li></li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Ch6: Document Object Model</h2>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p class="note">Questions for the Teacher</p>
+                <ol>
+                    <li></li>
+                </ol>
+                <p class="note">Personal Notes</p>
+                <li></li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Ch7: Events</h2>
+            <p class="caret">Notes</p> 
+            <ul class="nested">
+                <p class="note">Questions for the Teacher</p>
+                <ol>
+                    <li></li>
+                </ol>
+                <p class="note">Personal Notes</p>
+                <li></li>
+            </ul>
+        </article>
+
+        <article style="margin-bottom: 1em;">
+            <h2>Weekly Report</h2>
+            <p class="caret">View</p> 
+            <ul class="nested">
+                <p>Enter Notes Here</p>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <div><p>Author: Tristin Parker - 2021 - BYUI - <a href="../index.html">Main Index Link</a> - <a href="./index.html">Weekly Index Link</a></p></div>
+    </footer>
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+          toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+          });
+        }
+        </script>
+</body>
+</html>
