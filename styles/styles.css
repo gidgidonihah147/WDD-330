@@ -24,6 +24,9 @@ html{
     border: 2px solid white;
     margin: 1em;
   }
+  a:link, a:hover, a:active, a:visited {
+    color: white;
+  }
   main{
     border: 2px solid white;
   }
