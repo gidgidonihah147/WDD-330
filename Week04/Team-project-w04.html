@@ -76,6 +76,7 @@
     const player1 = "X";
     const player2 = "O";
     let turn = "X";
+    let current = "Player 1";
     let winner;
     let xCount = 0;
     let oCount = 0;
@@ -99,6 +100,7 @@
     //Create both the reset and initialize function
     function reset(){
         turn = "X";
+        current = "Player 1"
         winner = null;
         document.querySelectorAll('td').forEach(item => { item.innerHTML = ""});
         clear()
@@ -107,13 +109,14 @@
     }
     function initialize(){
         turn = "X";
+        current = "Player 1"
         winner = null;
         document.querySelectorAll('td').forEach(item => { item.innerHTML = ""});
         console.log("Reset");
         xCount=0;
-        x.innerHTML = "Current # of placements for X is: " + xCount;
+        x.innerHTML = "Current # of placements for Player 1 is: " + xCount;
         oCount=0;
-        o.innerHTML = "Current # of placements for X is: " + xCount;
+        o.innerHTML = "Current # of placements for Player 2 is: " + xCount;
         checkWinner(); 
     }
 
@@ -129,6 +132,7 @@
                 update(square);
                 //move to the next turn in the order
                 turn = turn === 'X' ? 'O' : 'X';
+                current = current === 'Player 1' ? 'Player 2' : 'Player 1';
             }
         }
         //run the getWinner function to see if there is an active winner
@@ -145,21 +149,21 @@
         if(turn == "X"){
             var x = document.getElementById("x");
             xCount++
-            x.innerHTML = "Current # of placements for X is: " + xCount;
+            x.innerHTML = "Current # of placements for "+ current + " is: " + xCount;
         }
         if (turn == "O"){
             var x = document.getElementById("o");
             oCount++
-            o.innerHTML = "Current # of placements for X is: " + xCount;
+            o.innerHTML = "Current # of placements for " + current + " is: " + xCount;
         }
     }
     function clear(){
         document.querySelectorAll('td').forEach(item => {item.classList.remove("O")});
         document.querySelectorAll('td').forEach(item => {item.classList.remove("X")});
         xCount=0;
-        x.innerHTML = "Current # of placements for X is: " + xCount;
+        x.innerHTML = "Current number of placements for " + current + " is: " + xCount;
         oCount=0;
-        o.innerHTML = "Current # of placements for X is: " + xCount;
+        o.innerHTML = "Current number of placements for " + current +" is: " + xCount;
     }
 
     //check the board to see if the aray matches any of the winning possibilities
@@ -178,17 +182,17 @@
     function checkWinner() {
         let messages = document.getElementById('winner');
         if (winner == "X"){
-            messages.innerHTML = "The winner is " + winner +"!"; 
+            messages.innerHTML = "The winner is " + current + "!"; 
         }
         if (winner == "O"){
-            messages.innerHTML = "The winner is " + winner +"!"; 
+            messages.innerHTML = "The winner is " + current + "!"; 
         }
         if (winner == "T") {
             messages.innerHTML = "The match was a tie!";
         }
         console.log("Ran check");
         if (winner == null) {
-            messages.innerHTML = "It's " + turn + "'s Turn to play";
+            messages.innerHTML = "It's " + current + "'s Turn to play";
         }
     }
     //initializing the check winner function to add the current turn when the page is loaded
