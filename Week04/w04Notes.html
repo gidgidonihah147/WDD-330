@@ -13,8 +13,13 @@
         <div><h1>W03 Reading - JavaScript Ninja</h1></div>
     </header>
     <main>
+        <p class="note">Questions for the Teacher</p>
+                <ol>
+                    <li>If you could look over my extra code on the team assignment and give feedback on that, I would greatly appreciate it. There were quite a few things there that I wanted to try out and was new to me. I'm sure that there were easier ways to do what I wanted but I couldnt find them.</li>
+                    <li>I added the code to import the classes for each selection so the CSS could work. I also added the clear out for those classes so when you hit reset it would clear those out. Then I added the current player alongside the turn, and created a counter for each player</li>
+                </ol>
         <article>
-            <h2>Ch5: Objects</h2>
+            <h2>Ch8: Forms</h2>
             <p class="caret">Notes</p> 
             <ul class="nested">
                 <p class="note">Questions for the Teacher</p>
@@ -22,62 +27,34 @@
                     <li></li>
                 </ol>
                 <p class="note">Personal Notes</p>
-                <li>Objects are often used to keep any related information and functionality together in the same place. For example, if you wrote functions that found the perimeter and area of a square, you might want to group them together as methods of the same object that also included a length property. </li>
-                    <li><p>
-                            Creating Objects
-                            To create an object literal, simply enter a pair of curly braces. The following example creates an empty object that is assigned to the variable spiderman :
-                            const spiderman = {};
-                            It’s also possible to create an object using a constructor function. This example will also create an empty object:
-                            const spiderman = new Object();
-                            This method is not recommended, however, and the object literal notation is the preferred way of creating objects. The obvious reason is because it requires less typing and provides a concise way of initializing an object and its properties in one statement. 
-                        </p>
+                    <li>
+                        The search form is super cool, I want to learn more about that and what the keywords would be and how to enter that into code.
                     </li>
                     <li>
-                        <p>Another way is to use the hasOwnProperty() method. As mentioned earlier, objects can inherit properties from other objects, so all objects have a method called hasOwnProperty() . This can be used to check whether an object has a property that is its own, rather than one that has been inherited from another object:
-                            superman.hasOwnProperty('city');
-                            << false
-                            superman.hasOwnProperty('name');
-                            << true
-                            This method willonlyreturn any properties that belong to that particular object, whereas using in or !== undefined will return true , even if the property has been inherited from another object (inheritance is covered later in Chapter 12).
-                        </p>
+                        <p>Great form methods</p>
+                        <ol>
+                            <li>Form.submit</li>
+                            <li>Form.reset</li>
+                            <li>form.action - can be used to set the action attribute of a form, so its sent to a different url to be processed on the server</li>
+                        </ol>
                     </li>
+                    <li>Placeholders are super nice to use - "placeholder='enter text'"</li>
                     <li>
-                        <p>
-                            Naming collisions occur when the same variable or function name is used for different purposes by code sharing the same scope. This might not seem likely, but imagine if you have lots of code that has been created over time – you might end up reusing a variable name without realizing. The problem becomes more likely if you use code libraries from other developers or work on code in teams, as you might choose the same name for a function as another member of the team.
-                        </p>
+                        Form Validation can check things like the following
+                        <ol>
+                            <li>A required field is completed</li>
+                            <li>An email address is valid</li>
+                            <li>A number is entered when numerical data is required</li>
+                            <li>A password is at least a minimum number of characters</li>
+                            <li>And so much more</li>
+                        </ol>
                     </li>
-                    <h4>JSON</h4>
-                    <li>
-                        <p>
-                            The Math.floor() method will round a numberdownto the next integer, or remain the same if it is already an integer:
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            A Practical Example
-                            If we were looking for PDF files and had a list of filenames, this regular expression could be used to find them (assuming they have a .pdf extension, of course):
-                                const pdf = /.*\.pdf$/;
-                            This looks for zero or more occurrences of any character, followed by an escaped period, followed by the letters " pdf " that must come at the end of the string:
-                                pdf.test('chapter5.pdf');
-                                true
-                                pdf.test('report.doc');
-                                false
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Matched Groups
-                                Sub-patterns can be created inside a regular expression by placing them inside parentheses. These are known ascapturing groups. Any matches to these will then be stored in an array of matches.
-                                Each capturing group is numbered according to the position it appears in the pattern. For example, the first capturing group will be numbered 1, and the second 2, etc. The matches will also be stored in special predefined variables $1 , $2 etc.
-                                To demonstrate this, here's an example that searches a string and replaces any HTML anchor tags withMarkdownnotation:
-                                The example has two capturing groups – the first captures any text inside the href attribute and stores it in the variable $1 and the second captures the text inside the anchor tags and stores it in the variable $2 . These matches can then be used to create the link using Markdown.
-                        </p>
-                    </li>
+                    
             </ul>
         </article>
 
         <article>
-            <h2>Ch6: Document Object Model</h2>
+            <h2>Ch12: Object Oriented Programming</h2>
             <p class="caret">Notes</p> 
             <ul class="nested">
                 <p class="note">Questions for the Teacher</p>
@@ -85,45 +62,25 @@
                     <li></li>
                 </ol>
                 <p class="note">Personal Notes</p>
-                <li>
                     <li>
-                        <p>
-                            The document.querySelector() method allows you to use CSS notation to find thefirstelement in the document that matches that matches a CSS selector provided as an argument. If no elements match, it will return null.
-                        </p>
+                        I have taken classes on both python and c++ so I know a bit about OOP. The only thing that I noted here was the difference in syntax between python and Javascript.
                     </li>
-                    <li>
-                        <p>
-                            The document.querySelectorAll() method also uses CSS notation but returns a node list ofallthe elements in the document that match the CSS query selector. If no elements match, it will return an empty node list. 
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            That The parentNode property returns the parent node of an element.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            The node lists returned by the document.getElementsByClassName() and document.getElementsByTagName() methods arelivecollections that will update to reflect any changes on the page. For example, if a new element with the class hero is added, or an existing one is removed, the node list updates automatically without having to make another call to the method. Therefore, its use is discouraged for performance reasons, but it can be useful. 
-                        </p>
-                    </li>
-                </li>
             </ul>
         </article>
 
         <article>
-            <h2>Ch7: Events</h2>
+            <h2>Ch15: Modern Javascript -> Modular Javascript</h2>
             <p class="caret">Notes</p> 
             <ul class="nested">
                 <p class="note">Questions for the Teacher</p>
                 <ol>
                     <li>
+                        With the use of modular Javascript, is it common practice to only have the imports inside of the main.js and have each function inside its own file in order to help organize things?
                     </li>
                 </ol>
                 <p class="note">Personal Notes</p>
                 <li>
-                    <p>
-                        I know most everything here so far, just because this confused me when I went through it the first class and I dug into it quite a bit.
-                    </p>
+                    This consept is really really cool to me. I always have issues with navagating my Javascript and making sure I know where everything is. With this I thnk I will be able to keep better track of things.
                 </li>
             </ul>
         </article>
@@ -132,9 +89,12 @@
             <h2>Weekly Report</h2>
             <p class="caret">View</p> 
             <ul class="nested">
-                <p>This week there were a few new things, or things I just forgot with the objects chapter. I did also learn quite a bit about the DOM that I didnt know. There wasnt alot that I didnt understand with it or thought that I needed to take notes on however. With chapter 7, I struggled previously in classes using and understanding events and how they work so I dived into them quite a bit. </p>
-                <p>I did also spend some of my time this week to create another website for a friend of mine. Its not complete yet, but I have started it. <a href="https://gidgidonihah147.github.io/Color-with-Kiri/products.html">Website</a></p>
-                <p>The strech goal in the team assignment was also interesting this week. We got it to work, but I am confused by a little bit of it and want to take more time to go back through it and make sure how it worked so that I could replicate it if I needed to.</p>
+                <p>
+                    This week I am in the process of moving so I wasnt able to do as much as I wanted to outside of the base requirements of the assignments. I did have some fun with the team project. After we all hopped off, I just kept thinking, "oh that would be cool to have in here" and didnt stop until my wife demanded that I turn it off and head to bed.
+                </p>
+                <p>
+                    I'm finding more and more that alot of the readings in general are things that I already know, but what I dont know are the subtle things or things that I have only used once, know what they are in theory, but wouldnt be able to say what it was if I needed to without looking it up. I think that part will just come with practice through.
+                </p>
             </ul>
         </article>
     </main>
